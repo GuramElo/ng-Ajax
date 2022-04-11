@@ -1,0 +1,5 @@
+<div class="button_container">
+  <button *ngFor="let i of user_mas"  (click)="store_values(i.id)" routerLink="/UserInfo">
+    {{i["name"]}}
+  </button>
+</div>

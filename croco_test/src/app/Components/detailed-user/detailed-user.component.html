@@ -1,0 +1,60 @@
+<ul>
+<li>
+<button class="data1">ID:</button>
+<button class="data2">{{curr_user.id | number}}</button>
+</li>
+<li>
+  <button class="data1">Name:</button>
+  <button class="data2">{{curr_user.name}}</button>
+  </li>
+<li>
+    <button class="data1">Username:</button>
+    <button class="data2">{{curr_user.username}}</button>
+</li>
+
+<li>
+  <button class="data1">E-mail:</button>
+  <button class="data2">{{curr_user.email}}</button>
+</li>
+
+<li>
+  <button class="data1">Address:</button>
+  <button class="data2">
+   <div><span>Street: </span> {{curr_user.address.street}}</div>
+   <div><span>Suite: </span> {{curr_user.address.suite}}</div>
+   <div><span>City: </span> {{curr_user.address.city}}</div>
+   <div><span>Zip-Code: </span> {{curr_user.address.zipcode}}</div>
+   <div class="inner_box"><span>GEO</span>
+               <div><span>Lat:</span> {{curr_user.address.geo.lat | number}}</div>
+               <div><span>Lng:</span> {{curr_user.address.geo.lng | number}}</div>
+
+    </div>
+  </button>
+</li>
+
+<li>
+  <button class="data1">Phone:</button>
+  <button class="data2">{{curr_user.phone}}</button>
+</li>
+<li>
+  <button class="data1">Website:</button>
+  <button class="data2"><a [href]="'https://'+curr_user.website" target="_blank">{{curr_user.website}}</a></button>
+</li>
+<li>
+  <button class="data1">Company:</button>
+  <button class="data2">
+   <div> <span>Name:</span>{{" "+curr_user.company.name}}</div>
+   <div><span>Catch phrase:</span> {{curr_user.company.catchPhrase}}</div>
+   <div> <span>BS:</span> {{curr_user.company.bs}}</div>
+  </button>
+</li>
+<!--//===============================-->
+<li>
+  <button routerLink="/Users">HOME</button>
+  <button routerLink="/UserPosts">
+    მომხმარებლის პოსტები
+  </button>
+
+</li>
+</ul>
+
